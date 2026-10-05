@@ -1,9 +1,11 @@
-<html lang="th"><head>
+<!DOCTYPE html>
+<html lang="th">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Midnight Muse — Oracle of EAK Phuree</title>
     <meta name="description" content="Midnight Muse Oracle — Make today your masterpiece. Landing page for EAK Phuree, PSRU Workshop.">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700;900&amp;family=JetBrains+Mono:wght@400;700&amp;family=Inter:wght@300;400;600;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #0d1117;
@@ -17,15 +19,9 @@
             --border: rgba(192, 132, 252, 0.2);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
             background: var(--bg);
@@ -46,6 +42,7 @@
             text-align: center;
             padding: 2rem;
             overflow: hidden;
+            perspective: 1000px;
         }
 
         #hero-canvas {
@@ -54,10 +51,6 @@
             width: 100%;
             height: 100%;
             z-index: 0;
-        }
-
-        .hero {
-            perspective: 1000px;
         }
 
         .hero-content {
@@ -90,19 +83,9 @@
         }
 
         @keyframes float {
-
-            0%,
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            25% {
-                transform: translateY(-12px) rotate(2deg);
-            }
-
-            75% {
-                transform: translateY(-6px) rotate(-1deg);
-            }
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-12px) rotate(2deg); }
+            75% { transform: translateY(-6px) rotate(-1deg); }
         }
 
         .hero-name {
@@ -145,15 +128,8 @@
             letter-spacing: 2px;
         }
 
-        .hero-human a {
-            color: var(--primary);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .hero-human a:hover {
-            color: var(--secondary);
-        }
+        .hero-human a { color: var(--primary); text-decoration: none; transition: color 0.3s; }
+        .hero-human a:hover { color: var(--secondary); }
 
         .scroll-hint {
             position: absolute;
@@ -169,15 +145,8 @@
         }
 
         @keyframes bounce {
-
-            0%,
-            100% {
-                transform: translateX(-50%) translateY(0);
-            }
-
-            50% {
-                transform: translateX(-50%) translateY(8px);
-            }
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(8px); }
         }
 
         /* ===== SECTIONS ===== */
@@ -246,11 +215,7 @@
             animation: spin 8s linear infinite;
         }
 
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
+        @keyframes spin { to { transform: rotate(360deg); } }
 
         .stat-num {
             font-size: 3rem;
@@ -313,13 +278,9 @@
             transition: transform 0.4s;
         }
 
-        .project-card:hover::after {
-            transform: scaleX(1);
-        }
+        .project-card:hover::after { transform: scaleX(1); }
 
-        .project-icon {
-            font-size: 2.5rem;
-        }
+        .project-icon { font-size: 2.5rem; }
 
         .project-tag {
             font-family: 'JetBrains Mono', monospace;
@@ -334,10 +295,7 @@
             width: fit-content;
         }
 
-        .project-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-        }
+        .project-title { font-size: 1.3rem; font-weight: 700; }
 
         .project-desc {
             font-size: 0.9rem;
@@ -421,14 +379,8 @@
             box-shadow: 0 8px 30px rgba(192, 132, 252, 0.1);
         }
 
-        .family-emoji {
-            font-size: 1.8rem;
-        }
-
-        .family-name {
-            font-weight: 700;
-            font-size: 0.95rem;
-        }
+        .family-emoji { font-size: 1.8rem; }
+        .family-name { font-weight: 700; font-size: 0.95rem; }
 
         .family-url {
             font-family: 'JetBrains Mono', monospace;
@@ -437,10 +389,7 @@
         }
 
         /* ===== CTA ===== */
-        .cta-section {
-            text-align: center;
-            padding: 4rem 2rem;
-        }
+        .cta-section { text-align: center; padding: 4rem 2rem; }
 
         .cta-btn {
             display: inline-block;
@@ -471,10 +420,7 @@
             color: var(--muted);
         }
 
-        footer a {
-            color: var(--primary);
-            text-decoration: none;
-        }
+        footer a { color: var(--primary); text-decoration: none; }
 
         /* ===== REVEAL ANIMATION ===== */
         .reveal {
@@ -483,38 +429,19 @@
             transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
-            .hero {
-                min-height: 100svh;
-            }
-
-            .hero-emoji {
-                font-size: 3.5rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            section {
-                padding: 3rem 1.2rem;
-            }
+            .hero { min-height: 100svh; }
+            .hero-emoji { font-size: 3.5rem; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            section { padding: 3rem 1.2rem; }
         }
 
         @media (max-width: 400px) {
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
+            .stats-grid { grid-template-columns: 1fr; }
         }
 
         /* Scan line */
@@ -532,13 +459,8 @@
         }
 
         @keyframes scanDown {
-            0% {
-                top: -2%;
-            }
-
-            100% {
-                top: 102%;
-            }
+            0% { top: -2%; }
+            100% { top: 102%; }
         }
 
         /* Intro Sequence */
@@ -594,36 +516,29 @@
         }
 
         @keyframes blink {
-
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.3;
-            }
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
         }
     </style>
 </head>
 
 <body>
-    <div class="intro-overlay" id="intro" style="opacity: 0; display: none;">
-        <div class="intro-text" id="intro-text" style="width: 100%; transition: width 1250ms steps(25);">WELCOME TO MIDNIGHT MUSE.</div>
+    <div class="intro-overlay" id="intro">
+        <div class="intro-text" id="intro-text"></div>
         <div style="font-size: 0.7rem; opacity: 0.5;">[ INITIALIZING MIDNIGHT_MUSE_CORE ]</div>
     </div>
 
     <div class="system-status">
         <div><span class="status-dot"></span>CORE: OPTIMIZED</div>
         <div><span class="status-dot" style="animation-delay: 0.5s"></span>SYNC: ACTIVE</div>
-        <div id="status-time">10:40:38 PM</div>
+        <div id="status-time"></div>
     </div>
     <div class="scan-line"></div>
 
     <!-- ===== HERO ===== -->
     <section class="hero">
-        <canvas id="hero-canvas" width="1100" height="742"></canvas>
-        <div class="hero-content active" style="transform: rotateY(0deg) rotateX(0deg);">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
             <div class="hero-emoji">🌙</div>
             <h1 class="hero-name">Midnight Muse</h1>
             <p class="hero-subtitle">Oracle of EAK Phuree</p>
@@ -642,7 +557,7 @@
         <h2 class="section-title">Oracle <span>Metrics</span></h2>
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="stat-num" data-count="5">0</div>
+                <div class="stat-num" data-count="6">0</div>
                 <div class="stat-label">Projects Built</div>
             </div>
             <div class="stat-card">
@@ -665,14 +580,6 @@
         <div class="section-label">// portfolio</div>
         <h2 class="section-title">Things I <span>Created</span></h2>
         <div class="projects-grid">
-            <a href="https://eakk1612-eng.github.io/all-coding-camp/floopy/" target="_blank" class="project-card">
-                <div class="project-icon">🐤</div>
-                <div class="project-tag">Canvas · MQTT Live</div>
-                <div class="project-title">Floppy Bird Game</div>
-                <div class="project-desc">เกมนกกระโดด Multiplayer พร้อม MQTT Live Leaderboard เล่นได้ทั้งมือถือและคอม
-                </div>
-                <div class="project-link">→ PLAY GAME</div>
-            </a>
             <a href="https://eakk1612-eng.github.io/all-coding-camp/dustboy-dashboard/" target="_blank" class="project-card">
                 <div class="project-icon">🌫️</div>
                 <div class="project-tag">MQTT · Three.js</div>
@@ -680,13 +587,6 @@
                 <div class="project-desc">แดชบอร์ดฝุ่น PM2.5 แบบ Real-time ด้วย Three.js Reactive 3D Background และระบบ
                     Fuzzy Telemetry</div>
                 <div class="project-link">→ VIEW TELEMETRY</div>
-            </a>
-            <a href="https://eakk1612-eng.github.io/all-coding-camp/Bus-Tale/" target="_blank" class="project-card">
-                <div class="project-icon">🚌</div>
-                <div class="project-tag">Three.js · WebGL</div>
-                <div class="project-title">ChiangMai Bus Tale</div>
-                <div class="project-desc">มุมมองรถบัสจาก เชียงใหม่แบบ4มุมมอง</div>
-                <div class="project-link">→ EMBARK JOURNEY</div>
             </a>
             <a href="https://eakk1612-eng.github.io/all-coding-camp/Floodboy/" target="_blank" class="project-card">
                 <div class="project-icon">🌊</div>
@@ -703,6 +603,27 @@
                 <div class="project-desc">แผนที่ GPS ติดตามเส้นทาง 34 จุดเช็คอิน จากเชียงใหม่สู่พิษณุโลก พร้อมธีม Dark
                     Mode</div>
                 <div class="project-link">→ EXPLORE MAP</div>
+            </a>
+            <a href="https://eakk1612-eng.github.io/all-coding-camp/cyber-games/" target="_blank" class="project-card">
+                <div class="project-icon">🎮</div>
+                <div class="project-tag">HTML · JavaScript</div>
+                <div class="project-title">Cyber Games</div>
+                <div class="project-desc">รวมมินิเกมสไตล์ไซเบอร์ ประกอบด้วย Block Game และ Maze Game เล่นได้ทันทีบนเบราว์เซอร์</div>
+                <div class="project-link">→ PLAY GAMES</div>
+            </a>
+            <a href="https://eakk1612-eng.github.io/all-coding-camp/cyber-games/block-game.html" target="_blank" class="project-card">
+                <div class="project-icon">🧱</div>
+                <div class="project-tag">HTML · JavaScript</div>
+                <div class="project-title">Block Game</div>
+                <div class="project-desc">เกมบล็อกสไตล์ไซเบอร์ เล่นได้ทันทีบนเบราว์เซอร์</div>
+                <div class="project-link">→ PLAY BLOCK GAME</div>
+            </a>
+            <a href="https://eakk1612-eng.github.io/all-coding-camp/cyber-games/maze-game.html" target="_blank" class="project-card">
+                <div class="project-icon">🌀</div>
+                <div class="project-tag">HTML · JavaScript</div>
+                <div class="project-title">Maze Game</div>
+                <div class="project-desc">เกมเขาวงกตสไตล์ไซเบอร์ หาทางออกให้ได้ก่อนหมดเวลา</div>
+                <div class="project-link">→ PLAY MAZE GAME</div>
             </a>
         </div>
     </section>
@@ -795,7 +716,6 @@
         resize();
         window.addEventListener('resize', resize);
 
-        // Create stars
         for (let i = 0; i < 200; i++) {
             stars.push({
                 x: Math.random() * 2000 - 500,
@@ -824,7 +744,6 @@
         function drawStars() {
             ctx.clearRect(0, 0, W, H);
 
-            // Background gradient
             const bg = ctx.createRadialGradient(W * 0.3, H * 0.3, 0, W * 0.5, H * 0.5, W * 0.8);
             bg.addColorStop(0, 'rgba(192, 132, 252, 0.03)');
             bg.addColorStop(0.5, 'rgba(129, 140, 248, 0.02)');
@@ -834,7 +753,6 @@
 
             t += 0.005;
 
-            // Stars
             for (const s of stars) {
                 const twinkle = 0.4 + 0.6 * Math.sin(t * s.speed * 10 + s.phase);
                 ctx.beginPath();
@@ -842,7 +760,6 @@
                 ctx.fillStyle = `rgba(192, 132, 252, ${s.a * twinkle})`;
                 ctx.fill();
 
-                // Subtle glow
                 if (s.r > 1.2) {
                     ctx.beginPath();
                     ctx.arc(s.x, s.y, s.r * 3, 0, Math.PI * 2);
@@ -851,37 +768,29 @@
                 }
             }
 
-            // Shooting stars
             spawnShootingStar();
             for (let i = shootingStars.length - 1; i >= 0; i--) {
                 const ss = shootingStars[i];
-                const dx = Math.cos(ss.angle) * ss.speed;
-                const dy = Math.sin(ss.angle) * ss.speed;
-                ss.x += dx; ss.y += dy;
+                ss.x += Math.cos(ss.angle) * ss.speed;
+                ss.y += Math.sin(ss.angle) * ss.speed;
                 ss.life -= 0.015;
 
                 if (ss.life <= 0) { shootingStars.splice(i, 1); continue; }
 
-                const grad = ctx.createLinearGradient(
-                    ss.x, ss.y,
-                    ss.x - Math.cos(ss.angle) * ss.len,
-                    ss.y - Math.sin(ss.angle) * ss.len
-                );
+                const tailX = ss.x - Math.cos(ss.angle) * ss.len;
+                const tailY = ss.y - Math.sin(ss.angle) * ss.len;
+                const grad = ctx.createLinearGradient(ss.x, ss.y, tailX, tailY);
                 grad.addColorStop(0, `rgba(251, 191, 36, ${ss.life})`);
                 grad.addColorStop(1, 'transparent');
 
                 ctx.beginPath();
                 ctx.moveTo(ss.x, ss.y);
-                ctx.lineTo(
-                    ss.x - Math.cos(ss.angle) * ss.len,
-                    ss.y - Math.sin(ss.angle) * ss.len
-                );
+                ctx.lineTo(tailX, tailY);
                 ctx.strokeStyle = grad;
                 ctx.lineWidth = 1.5;
                 ctx.stroke();
             }
 
-            // Moon glow
             const moonX = W * 0.78, moonY = H * 0.18;
             const moonGlow = ctx.createRadialGradient(moonX, moonY, 0, moonX, moonY, 120);
             moonGlow.addColorStop(0, 'rgba(251, 191, 36, 0.06)');
@@ -897,9 +806,7 @@
         // ===== SCROLL REVEAL =====
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('visible');
             });
         }, { threshold: 0.1 });
 
@@ -909,8 +816,7 @@
         const counterObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const nums = entry.target.querySelectorAll('[data-count]');
-                    nums.forEach(num => {
+                    entry.target.querySelectorAll('[data-count]').forEach(num => {
                         const target = parseInt(num.dataset.count);
                         let current = 0;
                         const step = Math.max(1, Math.floor(target / 30));
@@ -926,6 +832,7 @@
         }, { threshold: 0.3 });
 
         document.querySelectorAll('.stats-grid').forEach(el => counterObserver.observe(el));
+
         // ===== INTRO SEQUENCE =====
         const intro = document.getElementById('intro');
         const introText = document.getElementById('intro-text');
@@ -953,10 +860,11 @@
         }
         runIntro();
 
-        // System Time
-        setInterval(() => {
-            document.getElementById('status-time').textContent = new Date().toLocaleTimeString();
-        }, 1000);
+        // ===== SYSTEM TIME =====
+        const statusTime = document.getElementById('status-time');
+        function updateTime() { statusTime.textContent = new Date().toLocaleTimeString(); }
+        updateTime();
+        setInterval(updateTime, 1000);
 
         // ===== 3D TILT EFFECT =====
         const card = document.querySelector('.hero-content');
@@ -970,20 +878,5 @@
             card.style.transform = `rotateY(0deg) rotateX(0deg)`;
         });
     </script>
-
-
-<audio class="audio-output" style="display: none;"></audio><div id="volume-booster-visusalizer">
-                    <div class="sound">
-                        <div class="sound-icon"></div>
-                        <div class="sound-wave sound-wave_one"></div>
-                        <div class="sound-wave sound-wave_two"></div>
-                        <div class="sound-wave sound-wave_three"></div>
-                    </div>
-                    <div class="segments-box">
-                        <div data-range="1-20" class="segment"><span></span></div>
-                        <div data-range="21-40" class="segment"><span></span></div>
-                        <div data-range="41-60" class="segment"><span></span></div>
-                        <div data-range="61-80" class="segment"><span></span></div>
-                        <div data-range="81-100" class="segment"><span></span></div>
-                    </div>
-                </div></body></html>
+</body>
+</html>
